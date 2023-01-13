@@ -16,6 +16,7 @@ type HttpConfig struct {
 
 type SmtpConfig struct {
 	Addr       string `json:"addr"`
+	Port       int    `json:"port"`
 	Username   string `json:"username"`
 	Password   string `json:"password"`
 	From       string `json:"from"`

@@ -5,18 +5,6 @@ mail-provider
 
 ## 安装方法
 
-1.二进制安装(推荐)   
-sha256sum
-```bash
-7f714c8e4542670833505c274c420be1c89c5247dd8c72121cf0baa1d33edd49  falcon-mail-provider.tar.gz
-```
-
-下载编译好的二进制
-```bash
-wget https://dl.cactifans.com/open-falcon/falcon-mail-provider.tar.gz
-mkdir -p falcon-mail-provider
-tar zxvf falcon-mail-provider.tar.gz -C falcon-mail-provider
-cd falcon-mail-provider
 ```
 修改cfg.json文件相关信息，使用
 ```bash
@@ -29,9 +17,9 @@ cd falcon-mail-provider
 编译方法
 ```bash
 cd $GOPATH/src
-mkdir github.com/open-falcon/ -p
-cd github.com/open-falcon/
-git clone https://github.com/open-falcon/mail-provider.git
+mkdir github.com/crosspass/ -p
+cd github.com/crossspass/
+git clone https://github.com/crosspass/mail-provider.git
 cd mail-provider
 go get ./...
 ./control build
@@ -40,7 +28,7 @@ go get ./...
 ```bash
 ./control start
 ```
-即可启动   
+即可启动
 
 
 ## 使用方法
@@ -52,7 +40,7 @@ curl http://127.0.0.1:4000/sender/mail -d "tos=a@a.com,b@b.com&subject=xx&conten
 ```bash
 ./control tail
 ```
-查看日志。   
+查看日志。
 在Alarm组件的配置文件里，配置对应地址即可
 ```json
 ...

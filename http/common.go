@@ -3,7 +3,7 @@ package http
 import (
 	"net/http"
 
-	"github.com/open-falcon/mail-provider/config"
+	"vnote.club/mail-provider/config"
 )
 
 func configCommonRoutes() {

@@ -7,8 +7,8 @@ import (
 	"os"
 	"runtime"
 
-	"github.com/open-falcon/mail-provider/config"
-	"github.com/open-falcon/mail-provider/http"
+	"vnote.club/mail-provider/config"
+	"vnote.club/mail-provider/http"
 )
 
 func prepare() {
