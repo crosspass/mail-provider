@@ -24,13 +24,14 @@ func configProcRoutes() {
 		subject := param.MustString(r, "subject")
 		content := param.MustString(r, "content")
 		tos = strings.Replace(tos, ",", ";", -1)
+		tosList = strings.split(tos, ';')
 
 		// s := smtp.NewSMTP(cfg.Smtp.Addr, cfg.Smtp.Username, cfg.Smtp.Password, cfg.Smtp.TLS, cfg.Smtp.Anonymous, cfg.Smtp.SkipVerify)
 		// err := s.SendMail(cfg.Smtp.From, tos, subject, content)
 
 		m := gomail.NewMessage()
 		m.SetHeader("From", cfg.Smtp.From)
-		m.SetHeader("To", tos)
+		m.SetHeader("To", tosList...)
 		m.SetHeader("Subject", subject)
 		m.SetBody("text/html", content)
 
