@@ -24,7 +24,7 @@ func configProcRoutes() {
 		subject := param.MustString(r, "subject")
 		content := param.MustString(r, "content")
 		tos = strings.Replace(tos, ",", ";", -1)
-		tosList = strings.split(tos, ';')
+		tosList := strings.Split(tos, ";")
 
 		// s := smtp.NewSMTP(cfg.Smtp.Addr, cfg.Smtp.Username, cfg.Smtp.Password, cfg.Smtp.TLS, cfg.Smtp.Anonymous, cfg.Smtp.SkipVerify)
 		// err := s.SendMail(cfg.Smtp.From, tos, subject, content)
